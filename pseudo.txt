@@ -1,0 +1,7 @@
+!!!!This is just pseudo code to help with thinking out the code for the game.
+
+Rock Paper Scissors is a game where rock beats scissors scissors beat paper but paper beats rock so each beats one but not the other.
+
+examples are you have a player and a computer you would have the player choose and have the compute rhave all the options but choose one of the three based on a random numbe roll?
+
+Wouldnt hurt to factor code to be able to accept multiplayer later down the line with some sort of options.
