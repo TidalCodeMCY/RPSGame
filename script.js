@@ -19,6 +19,9 @@ function winRound(){
     pscore++;
     console.log('You won the round!');
     console.log(pscore,cscore);
+    if(pscore === 5 || cscore === 5){
+        return finishGame();
+    }
     game()
 }
 
@@ -26,12 +29,23 @@ function loseRound(){
     cscore++;
     console.log('You lost the round!');
     console.log(pscore,cscore);
+    if(pscore === 5 || cscore === 5){
+        return finishGame();
+    }
     game()
 }
 
 function tieRound(){
     console.log('Tie Game Try Again!')
     game();
+}
+
+function finishGame(){
+    if(pscore === 5 && cscore < 5){
+        console.log('You won five rounds well done!');
+    }else if(cscore === 5 && pscore < 5){
+        console.log('You lost try again another time!');
+    }
 }
 
 //This function takes the 2 values we got and uses them to play a round to check for winners.
