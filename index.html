@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Project RPS Game by TidalCodeMCY</title>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <h1>Rock Paper or Scissors</h1>
-        <p>The choice is yours to make hope you choose right!</p>
+        <h1 class="title">Rock Paper or Scissors</h1>
+        <p class="description">The choice is yours to make hope you choose right!</p>
     </header>
     <main>
         <div class="mainBox">
             <div class="scoreBox">
-                <p class="playerScore">Player Score: </p>
-                <p class="computerScore">Computer Score:0</p>
+                <p class="playerScore" id="playerScore">Player Score: 0</p>
+                <p class="computerScore" id="computerScore">Computer Score: 0</p>
             </div>
             <div class="imgBox">
-                <img src="./Images/rock.png" alt="Rock" class="Rock">
-                <img src="./Images/paper.png" alt="Paper" class="Paper">
-                <img src="./Images/scissors.png" alt="Scissors" class="Scissors">
+                <img src="./Images/rock.png" alt="Rock" id="Rock">
+                <img src="./Images/paper.png" alt="Paper" id="Paper">
+                <img src="./Images/scissors.png" alt="Scissors" id="Scissors">
             </div>
         </div>
     </main>

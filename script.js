@@ -1,11 +1,23 @@
 //Variables 
 let pscore = 0;
 let cscore = 0;
+let playerScore = document.getElementById('playerScore');
+let computerScore = document.getElementById('computerScore');
+
+//Event Listeners
+let rock = document.getElementById('Rock');
+rock.addEventListener('click', () => {game('rock')});
+
+let paper = document.getElementById('Paper');
+paper.addEventListener('click', () => {game('paper')});
+
+let scissors = document.getElementById('Scissors');
+scissors.addEventListener('click', () => {game('scissors')});
 //Functions
 
 //Call this function to start the game loop and play. 
-function game(){
-    let playerChoice = prompt("Rock Paper Or Scissors?");
+function game(pchoice){
+    let playerChoice = pchoice;
     playerChoice = playerChoice.toLowerCase();
     if(playerChoice === 'rock' || playerChoice === 'paper' || playerChoice ==='scissors'){
         let computerChoice = getComputerChoice();
@@ -17,34 +29,39 @@ function game(){
 
 function winRound(){
     pscore++;
-    console.log('You won the round!');
-    console.log(pscore,cscore);
+    alert('You won the round!');
+    playerScore.textContent = `Player Score: ${pscore}`;
+    computerScore.textContent = `Computer Score ${cscore}`;
     if(pscore === 5 || cscore === 5){
         return finishGame();
     }
-    game()
 }
 
 function loseRound(){
     cscore++;
-    console.log('You lost the round!');
-    console.log(pscore,cscore);
+    alert('You lost the round!');
+    playerScore.textContent = `Player Score: ${pscore}`;
+    computerScore.textContent = `Computer Score ${cscore}`;
     if(pscore === 5 || cscore === 5){
         return finishGame();
     }
-    game()
 }
 
 function tieRound(){
-    console.log('Tie Game Try Again!')
-    game();
+    alert('Tie Game Try Again!')
+    playerScore.textContent = `Player Score: ${pscore}`;
+    computerScore.textContent = `Computer Score ${cscore}`;
 }
 
 function finishGame(){
     if(pscore === 5 && cscore < 5){
-        console.log('You won five rounds well done!');
+        playerScore.textContent = `Player Score: 0`;
+        computerScore.textContent = `Computer Score: 0`;
+        alert('You won five rounds well done!');
     }else if(cscore === 5 && pscore < 5){
-        console.log('You lost try again another time!');
+        playerScore.textContent = `Player Score: 0`;
+        computerScore.textContent = `Computer Score: 0`;
+        alert('You lost try again another time!');
     }
 }
 

@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 80%;
+}
+
+.title,.description {
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.scorebox {
+    display: grid;
+    width: 100%;
+}
+
+.playerScore,.computerScore {
+    text-align: center;
+    padding-right: 120px;
+    padding-bottom: 10px;
+}
+
+img{
+    width: 240px;
+    height: 240px;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.imgBox {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: center;
+    align-content: center;
+    padding-left: 100px;
+}
+
+footer{
+    text-align: center;
+    font-size: 10px;
+}
