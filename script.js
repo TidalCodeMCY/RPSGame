@@ -95,4 +95,4 @@ function getNum(){
     }
 }
 //Other Stuff
-game();
+//game();
